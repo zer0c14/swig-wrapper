@@ -197,17 +197,17 @@
 		PyObject *sptype = NULL, *spvalue = NULL, *sptraceback = NULL;
 		const char *stype, *svalue, *straceback;
 		PyErr_Fetch(&ptype, &pvalue, &ptraceback);
-		if (ptype && (sptype = PyObject_Str(ptype)))
-			stype = PyString_AS_STRING(sptype);
-		else
+		//if (ptype && (sptype = PyObject_Str(ptype)))
+		//	stype = PyString_AS_STRING(sptype);
+		//else
 			stype = "";
-		if (pvalue && (spvalue = PyObject_Str(pvalue)))
-			svalue = PyString_AS_STRING(spvalue);
-		else
+		//if (pvalue && (spvalue = PyObject_Str(pvalue)))
+		//	svalue = PyString_AS_STRING(spvalue);
+		//else
 			svalue = "";
-		if (ptraceback && (sptraceback = PyObject_Str(ptraceback)))
-			straceback = PyString_AS_STRING(sptraceback);
-		else
+		//if (ptraceback && (sptraceback = PyObject_Str(ptraceback)))
+		//	straceback = PyString_AS_STRING(sptraceback);
+		//else
 			straceback = "";
 		apt_log(APT_LOG_MARK, PyAPT_PRIO_CRITICAL, "Python exception "
 			"Type(%s) Value(%s) Traceback(%s)", stype, svalue, straceback);
