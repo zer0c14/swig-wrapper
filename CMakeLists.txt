@@ -248,7 +248,7 @@ if (WRAP_CSHARP)
 	endif (SIGN)
 endif (WRAP_CSHARP)
 
-find_package (PythonLibs, 3)
+find_package (PythonLibs 3)
 if (PYTHONLIBS_FOUND)
 option (WRAP_PYTHON "Build UniMRCP for Python" ON)
 if (WRAP_PYTHON)
