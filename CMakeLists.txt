@@ -20,7 +20,7 @@
 # $Id$
 #=============================================================================
 
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.2)
 
 project (UniMRCPWrapper)
 
@@ -248,7 +248,7 @@ if (WRAP_CSHARP)
 	endif (SIGN)
 endif (WRAP_CSHARP)
 
-find_package (PythonLibs)
+find_package (PythonLibs, 3)
 if (PYTHONLIBS_FOUND)
 option (WRAP_PYTHON "Build UniMRCP for Python" ON)
 if (WRAP_PYTHON)
